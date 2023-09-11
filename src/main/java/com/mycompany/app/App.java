@@ -25,7 +25,7 @@ public class FirstServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CodePostal() {
+    public codepostal() {
         super();
         // TODO Auto-generated constructor stub
     }
