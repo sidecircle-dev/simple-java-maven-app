@@ -5,5 +5,5 @@
 #COPY target/*.jar /opt/app.jar
 #ENTRYPOINT exec java $JAVA_OPTS -jar app.jar
 
-FROM tomcat9
+FROM tomcat
 COPY  target/hello.war /usr/local/tomcat/webapps/
