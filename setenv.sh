@@ -1,0 +1,5 @@
+#/bin/bash
+export DT_RELEASE_VERSION=1.2.3
+export DT_RELEASE_BUILD_VERSION=202309251546
+export DT_RELEASE_PRODUCT=artifact
+export DT_RELEASE_STAGE=production
