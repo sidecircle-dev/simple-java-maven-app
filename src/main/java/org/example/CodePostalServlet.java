@@ -60,21 +60,16 @@ try {
   
             // Loop through the result set to  
             // retrieve the individual data items. 
-  /*
-            while (rs.next()) { 
-                int sno = rs.getInt("sno"); 
-                String brand = rs.getString("brand"); 
-                String processor = rs.getString("processor"); 
-                float screenSize = rs.getFloat("screensize"); 
-                String osystem = rs.getString("operatingsystem"); 
-                int batteryLife = rs.getInt("batterylife"); 
   
-                out.println("<tr>" + "<td>" + sno + "</td>" + "<td>" + brand + "</td>" + "<td>" + processor + "</td>"
-                        + "<td>" + osystem + "</td>" + "<td>" + screenSize + "</td>" + "<td>" + batteryLife 
-                        + "</td></tr>"); 
+            while (rs.next()) { 
+               
+                String cp = rs.getString("cp"); 
+                String ville = rs.getString("ville"); 
+  
+                out.println("<tr>" + "<td>" + cp + "</td>" + "<td>" + ville + "</td></tr>"); 
   
             } 
-  */
+  
             out.println("</table></body></html>"); 
   
             // Close Result set, Statement 
