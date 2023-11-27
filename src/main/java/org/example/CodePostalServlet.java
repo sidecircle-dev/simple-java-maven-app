@@ -16,6 +16,22 @@ import java.sql.SQLException;
 @WebServlet(name = "CodePostalServlet", urlPatterns = {"/ville"})
 public class CodePostalServlet extends HttpServlet {
 
+    private final String url = "jdbc:postgresql://localhost/codepostal";
+    private final String user = "codepostal";
+    private final String password = "codepostal";
+
+    public Connection connect() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url, user, password);
+            System.out.println("Connected to the PostgreSQL server successfully.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return conn;
+    }
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
