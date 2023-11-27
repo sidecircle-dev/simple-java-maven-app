@@ -8,13 +8,13 @@ metadata-complete="true">
     <display-name>Hello World Web Application</display-name>
 
     <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>org.example.HelloServlet</servlet-class>
+        <servlet-name>CodePostalServlet</servlet-name>
+        <servlet-class>org.example.CodePostalServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/hello/*</url-pattern>
+        <servlet-name>CodePostalServlet</servlet-name>
+        <url-pattern>/ville/*</url-pattern>
     </servlet-mapping>
 
 </web-app>
