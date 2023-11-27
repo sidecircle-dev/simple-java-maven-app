@@ -40,10 +40,56 @@ public class CodePostalServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-                
-        response.setContentType("text/html;charset=UTF-8");
-        response.getWriter().println("<!DOCTYPE html> <html lang=\"en\"><head><title>title</title></head><body><h2>codepostal-ville!</h2></body></html>");
-     }
+try { 
+  
+            // Set the response content type and  
+            // get the PrintWriter object. 
+            response.setContentType("text/html"); 
+            PrintWriter out = response.getWriter(); 
+  
+            // Set up HTML table formatting for the output 
+            out.println("<html><body>"); 
+            out.println("<h3>CodePostal</h3>"); 
+            out.println("<table border=1><tr>" + "<td><b>Code</b></td>" + "<td><b>Ville</b></td></tr>"); 
+  
+            // Create JDBC statement object, construct  
+            // the SQL query and execute the query. 
+            Statement stmt = conn.createStatement(); 
+            String sql = "select * from codepostal where cp='14480';"; 
+            ResultSet rs = stmt.executeQuery(sql); 
+  
+            // Loop through the result set to  
+            // retrieve the individual data items. 
+  /*
+            while (rs.next()) { 
+                int sno = rs.getInt("sno"); 
+                String brand = rs.getString("brand"); 
+                String processor = rs.getString("processor"); 
+                float screenSize = rs.getFloat("screensize"); 
+                String osystem = rs.getString("operatingsystem"); 
+                int batteryLife = rs.getInt("batterylife"); 
+  
+                out.println("<tr>" + "<td>" + sno + "</td>" + "<td>" + brand + "</td>" + "<td>" + processor + "</td>"
+                        + "<td>" + osystem + "</td>" + "<td>" + screenSize + "</td>" + "<td>" + batteryLife 
+                        + "</td></tr>"); 
+  
+            } 
+  */
+            out.println("</table></body></html>"); 
+  
+            // Close Result set, Statement 
+            // and PrintWriter objects. 
+            rs.close(); 
+            stmt.close(); 
+            out.close(); 
+  
+        } catch (SQLException e) { 
+            e.printStackTrace(); 
+        } 
+              
+              
+            
+    }
 
     public void destroy() { 
   
