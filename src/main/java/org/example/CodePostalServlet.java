@@ -39,7 +39,7 @@ public class CodePostalServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        cnx = self.connect();
+        
                 
         response.setContentType("text/html;charset=UTF-8");
         response.getWriter().println("<!DOCTYPE html> <html lang=\"en\"><head><title>title</title></head><body><h2>codepostal-ville!</h2></body></html>");
