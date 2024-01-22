@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "CodePostalServlet", urlPatterns = {"/ville"})
 public class CodePostalServlet extends HttpServlet {
 
-    private final String url = "jdbc:postgresql://localhost/codepostal";
+    private final String url = "jdbc:postgresql://10.96.184.31/codepostal";
     private final String user = "codepostal";
     private final String password = "codepostal";
     private final String driver = "org.postgresql.Driver";
